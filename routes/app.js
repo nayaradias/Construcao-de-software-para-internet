@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
-    res.render('index');
+router.get('/', (req, res, next)=>{
+    res.render('node');
 });
 
-router.post('/message', function(req, res, next){
+router.post('/message',(req, res, next)=>{
     var messageVar = req.body.messageBody;
     res.redirect('/message/' + messageVar);
 });
 
-router.get('/message/:msgParam', function(req, res, next){
-    res.render('node', { message: req.param.msgParam });
+router.get('/message/:msgParam',(req, res, next)=>{
+    res.render('node', { message: req.params.msgParam });
 });
 
 module.exports = router;
