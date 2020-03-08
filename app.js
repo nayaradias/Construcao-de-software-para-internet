@@ -4,10 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose  = require('mongoose');
 var appRoutes = require('./routes/app');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost:27017/node-angular',{ useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
+    console.log('Conectado ao mongodb');
+}).catch((err) => {
+    console.log('Erro ao se conectar ao banco de dados: ' + err);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
