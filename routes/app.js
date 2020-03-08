@@ -1,6 +1,32 @@
 var express = require("express");
 var router = express.Router();
 var User = require("../models/user");
+
+router.get('/registro-usuario-salvar',function(req,res,next){
+res.render('registro-usuario-salvar');
+});
+
+router.post("/registro-usuario-salvar", function(req, res, next) {
+  var senha = req.body.password;
+  var confirm = req.body.confirm;
+  var check;
+  if(senha == confirm)
+    check = senha;
+    else{
+      res.render('erro');
+    }
+  var userObject = new User({
+    firstName: req.body.username,
+    lastName: req.body.name,
+    email: req.body.email,
+    password: check,
+  });
+  
+  userObject.save();
+ res.redirect('/registro-usuario-salvar');
+});
+
+
 router.get("/node-mongodb-mongoose-user", function(req, res, next) {
   res.render("node1");
 });
