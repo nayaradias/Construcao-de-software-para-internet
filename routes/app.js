@@ -2,6 +2,10 @@ var express = require("express");
 var router = express.Router();
 var User = require("../models/user");
 
+router.get("/", (req, res, next) => {
+  res.render("index");
+});
+
 router.get('/registro-usuario-salvar',function(req,res,next){
 res.render('registro-usuario-salvar');
 });
@@ -57,10 +61,6 @@ router.get("/node-mongodb-mongoose-user-busca", function(req, res, next) {
       messagev: documents.message
     });
   });
-});
-
-router.get("/", (req, res, next) => {
-  res.render("node");
 });
 
 router.post("/message", (req, res, next) => {
