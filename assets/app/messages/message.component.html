@@ -1,3 +1,15 @@
+<div class="row">
+  <div class="col-md-6">
+      <div class="form-group">
+          <input type="text" class="form-control"  [(ngModel)]="message.content">
+        </div>
+  </div>
+  <div class="col-md-6">
+      <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="message.author">
+        </div>
+  </div>
+</div>
 <article class="panel panel-default">
   <div class="panel-body">
     {{ message.content }}
@@ -5,7 +17,6 @@
   <footer class="panel-footer">
     <div class="author">
       {{ message.author }}
-      <!-- <app-message></app-message> -->
     </div>
     <div class="config">
       <a href="#">Edit</a>

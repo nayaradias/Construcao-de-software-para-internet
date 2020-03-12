@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './auth/user.model';
-
+import { Person } from './person/person.model';
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
@@ -25,7 +25,9 @@ export class AppComponent {
         content: 'Tô ficando fera no assunto',
         author:'Vinicius'
     }
-    pessoa1: User = new User("Teste",'Vinicius',"teste2");
-    pessoa2: User;
-    pessoa3: User = new User('','');
+    // pessoa1: User = new User("Teste",'Vinicius',"teste2");
+    // pessoa2: User;
+    // pessoa3: User = new User('','');
+    pessoa1: Person = new Person(101,'teste',25);
+    
 }

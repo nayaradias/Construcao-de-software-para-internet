@@ -10,7 +10,7 @@ import { MessageComponent } from './messages/message.component';
         MessageComponent
     ],
     imports: [BrowserModule,FormsModule],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent,MessageComponent]
 })
 export class AppModule {
 

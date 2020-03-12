@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {FormsModule} from '@angular/forms';
 @Component({
   selector: "app-message",
   templateUrl: "./message.component.html",
@@ -19,4 +20,9 @@ import { Component } from "@angular/core";
     `
   ]
 })
-export class MessageComponent {}
+export class MessageComponent {
+  message = {
+    content: "",
+    author: ""
+}
+}
