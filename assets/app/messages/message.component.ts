@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import {FormsModule} from '@angular/forms';
+import { Message } from "./message.model";
 @Component({
   selector: "app-message",
   templateUrl: "./message.component.html",
@@ -21,8 +22,13 @@ import {FormsModule} from '@angular/forms';
   ]
 })
 export class MessageComponent {
-  message = {
-    content: "",
-    author: ""
+//   message = {
+//     content: "Teste",
+//     author: "Nayara"
+// };
+@Input() messageVarClasse: Message = new Message("","","","");
+@Input('inputMessage') messageVarClasseAlias: Message = new Message("","","","");
+onEdit(){
+  alert('Tá funcionando');
 }
 }

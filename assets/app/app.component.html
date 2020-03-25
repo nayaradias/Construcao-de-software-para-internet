@@ -1,16 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-   
-            <app-message></app-message>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"><input type="text" class="form-control" [(ngModel)]="pessoa1.fistName"></div>
-        <div class="col-md-4"><input type="text" class="form-control" [(ngModel)]="pessoa1.password"></div>
-        <div class="col-md-4"><input type="text" class="form-control" [(ngModel)]="pessoa1.email"></div>
-        <div class="font-weight-bold text-danger">
-            {{pessoa1.email}} - {{pessoa1.password}}-{{pessoa1.fistName}}
+            <app-message [messageVarClasse]="messageBinding"></app-message>
+
+            <app-message [inputMessage]="messageBindingAlias"></app-message>
         </div>
     </div>
 </div>
