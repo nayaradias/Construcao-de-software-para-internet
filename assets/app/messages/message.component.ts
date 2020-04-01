@@ -22,10 +22,13 @@ import { Message } from "./message.model";
   ]
 })
 export class MessageComponent {
-//   message = {
-//     content: "Teste",
-//     author: "Nayara"
-// };
+
+color = 'yellow';
+tam  = 12;
+onMudaStyle(){
+    this.color = 'red';
+    this.tam = 16;
+}
 @Input() messageVarClasse: Message = new Message("","","","");
 @Input('inputMessage') messageVarClasseAlias: Message = new Message("","","","");
 onEdit(){

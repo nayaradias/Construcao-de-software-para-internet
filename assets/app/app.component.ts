@@ -30,6 +30,12 @@ export class AppComponent {
     // pessoa2: User;
     // pessoa3: User = new User('','');
    // pessoa1: Person = new Person(101,'teste',25);
+  
+
+   mostrarElemento:boolean = true;
+   onMudaMostrarElemento(){
+       this.mostrarElemento = !this.mostrarElemento;
+   }
    messageBinding: Message = new Message("","Test 1 - Message","","Nayara 1");
    messageBindingAlias: Message = new Message("","Teste 2 - Message Alias","","Nayara 2");
 }

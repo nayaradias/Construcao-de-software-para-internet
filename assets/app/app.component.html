@@ -1,9 +1,24 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <app-message [messageVarClasse]="messageBinding"></app-message>
-
-            <app-message [inputMessage]="messageBindingAlias"></app-message>
-        </div>
+        <strong class="col-md-8 col-md-offset-2">  == Após Reestruturação ==  </strong>
+        <app-message-list></app-message-list>
+        <strong class="col-md-8 col-md-offset-2">  == Após Reestruturação == </strong>
+<!-- <app-message [messageVarClasse]="messageBinding"></app-message>
+            <app-message [inputMessage]="messageBindingAlias"></app-message> -->
     </div>
+    <!-- <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="card">
+                <div class="body-card">
+                    <button (click)="onMudaMostrarElemento()" class="btn btn-success">Click aqui Novo Estudo</button>
+                    {{mostrarElemento}}
+                    <p *ngIf="mostrarElemento">
+                        {{mostrarElemento ? 'p Mostrado|' + mostrarElemento : 'p Removido| + mostrarElemento'}}
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </div>

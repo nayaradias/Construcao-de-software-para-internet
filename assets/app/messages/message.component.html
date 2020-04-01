@@ -1,16 +1,9 @@
-<!-- <div class="row">
-  <div class="col-md-6">
-      <div class="form-group">
-          <input type="text" class="form-control"  [(ngModel)]="message.content">
-        </div>
-  </div>
-  <div class="col-md-6">
-      <div class="form-group">
-          <input type="text" class="form-control" [(ngModel)]="message.author">
-        </div>
-  </div>
-</div> -->
-<article class="panel panel-default">
+<article class="panel panel-default" 
+[ngStyle]="{backgroundColor:color}" 
+(mouseenter)="color = 'green'" 
+(mouseleave)="color = 'blue'" 
+(click)="color = 'yellow'" 
+(dblclick)="onMudaStyle()">
   <div class="panel-body">
     <!-- {{ message.content }} -->
     {{messageVarClasse.content}}
