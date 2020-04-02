@@ -31,8 +31,19 @@ export class AppComponent {
     // pessoa3: User = new User('','');
    // pessoa1: Person = new Person(101,'teste',25);
   
-
+   
+   age: Number = 19;
+   isValidRadio:boolean = true;
    mostrarElemento:boolean = true;
+   onMudaIdade(event:any){
+    if(event.code == 'Enter'){
+        console.log('Idade:',event.target.value);
+        this.age = event.target.value;
+    }
+   }
+   changeValue(valid:boolean){
+       this.isValidRadio = valid;
+   }
    onMudaMostrarElemento(){
        this.mostrarElemento = !this.mostrarElemento;
    }
