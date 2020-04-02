@@ -13,8 +13,8 @@ import { Message } from "./message.model";
 
 export class MessageListComponent{
     messages: Message[] = [
-        new Message("","Texto 1 da mensagem","","ViniciusRosalen"),
-        new Message("","Texto 2 da mensagem","","RosalenSilva"),
-        new Message("","Texto 3 da mensagem","","SilvaVinicius"),
+        new Message("","Texto 1 da mensagem-LIST-Comp","","ViniciusRosalen-LIST-Comp"),
+        new Message("","Texto 2 da mensagem-LIST-Comp","","RosalenSilva-LIST-Comp"),
+        new Message("","Texto 3 da mensagem-LIST-Comp","","SilvaVinicius-LIST-Comp"),
     ];
 }
