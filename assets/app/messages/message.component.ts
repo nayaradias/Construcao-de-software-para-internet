@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import {FormsModule} from '@angular/forms';
+import { Message } from "./message.model";
 @Component({
   selector: "app-message",
   templateUrl: "./message.component.html",
@@ -19,4 +21,17 @@ import { Component } from "@angular/core";
     `
   ]
 })
-export class MessageComponent {}
+export class MessageComponent {
+
+color = 'yellow';
+tam  = 12;
+onMudaStyle(){
+    this.color = 'red';
+    this.tam = 16;
+}
+@Input() messageVarClasse: Message = new Message("","","","");
+@Input('inputMessage') messageVarClasseAlias: Message = new Message("","","","");
+onEdit(){
+  alert('Tá funcionando');
+}
+}

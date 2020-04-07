@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { User } from './auth/user.model';
-
+import { Message } from './messages/message.model';
+// import { User } from './auth/user.model';
+// import { Person } from './person/person.model';
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
@@ -21,11 +22,31 @@ import { User } from './auth/user.model';
 })
 export class AppComponent {
     
-    message = {
-        content: 'Tô ficando fera no assunto',
-        author:'Vinicius'
+    // message = {
+    //     content: 'Tô ficando fera no assunto',
+    //     author:'Vinicius'
+    // }
+    // pessoa1: User = new User("Teste",'Vinicius',"teste2");
+    // pessoa2: User;
+    // pessoa3: User = new User('','');
+   // pessoa1: Person = new Person(101,'teste',25);
+  
+   
+   age: Number = 19;
+   isValidRadio:boolean = true;
+   mostrarElemento:boolean = true;
+   onMudaIdade(event:any){
+    if(event.code == 'Enter'){
+        console.log('Idade:',event.target.value);
+        this.age = event.target.value;
     }
-    pessoa1: User = new User("Teste",'Vinicius',"teste2");
-    pessoa2: User;
-    pessoa3: User = new User('','');
+   }
+   changeValue(valid:boolean){
+       this.isValidRadio = valid;
+   }
+   onMudaMostrarElemento(){
+       this.mostrarElemento = !this.mostrarElemento;
+   }
+   messageBinding: Message = new Message("","Test 1 - Message","","Nayara 1");
+   messageBindingAlias: Message = new Message("","Teste 2 - Message Alias","","Nayara 2");
 }
