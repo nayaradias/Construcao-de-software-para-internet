@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { Message } from './messages/message.model';
 // import { User } from './auth/user.model';
 // import { Person } from './person/person.model';
+import { MessageService } from './messages/message.services';
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
+    providers: [MessageService],
     styles:[`
         .author{
             display:inline-block;
