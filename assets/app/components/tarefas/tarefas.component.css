@@ -1,0 +1,19 @@
+.main {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 190px;
+    margin-right:150px;
+    padding: 15px 20px;
+  }
+  @media screen and (max-width: 800px) {
+    .main {
+      width: 60%;
+      padding: 25px 30px;
+      margin-top: 30px;
+      margin-left: 80px;
+      margin-right:110px;
+    }
+    .row{
+      margin-top: 20px;
+    }
+  }

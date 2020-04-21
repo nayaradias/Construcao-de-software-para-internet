@@ -1,0 +1,26 @@
+<div class="main-app">
+    <router-outlet></router-outlet>
+    <div class="sidebar">
+      <nav class="main-nav">
+        <ul class="main-menu">
+          <li class="menu-item" routerLinkActive="active">
+            <a [routerLink]="['tarefas']" class="menu-a">
+              <div class="menu-txt-hld">
+                <i class="fa fa-tasks menu-icon"></i>
+                <span class="menu-txt">Tarefas</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu-item" routerLinkActive="active">
+            <a [routerLink]="['formulario']" class="menu-a">
+              <div class="menu-txt-hld">
+                <i class="fa fa-pencil-ruler menu-icon"></i>
+                <span class="menu-txt">Formulario</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
