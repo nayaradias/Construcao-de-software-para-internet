@@ -1,0 +1,46 @@
+<app-message-input></app-message-input>
+<div class="mainMessage">
+    <article class="card card-default">
+        <div class="card-body" [ngStyle]="{background:style.color, 'font-size.px':style.fontSize}" (click)="onClick();"
+            (dblclick)="ondblclick();" (mouseenter)="onmouseenter();" (mouseleave)="onmouseleave();">
+            {{ messageVarClasse.content }}
+        </div>
+        <footer class="card-footer">
+            <div class="author">
+                {{ messageVarClasse.username }}
+            </div>
+            <div class="config">
+                <a (click)="onEdit()" data-toggle="tooltip" data-placement="top" title="Editar"><i
+                        class="fa fa-edit"></i></a>
+                <a (click)="onDelet()" data-toggle="tooltip" data-placement="top" title="Deletar"><i
+                        class="fas fa-trash-alt"></i></a>
+            </div>
+        </footer>
+    </article>
+</div>
+
+<!-- <div class="container">
+    <div class="row main">
+        <div class="col-sm-6 col-md-12 col-lg-12 col-xs-12">
+            <article class="card card-default">
+                <div class="card-body"
+                [ngStyle]="{background:style.color, 'font-size.px':style.fontSize}"
+                (click)="onClick();"
+                (dblclick)="ondblclick();"
+                (mouseenter)="onmouseenter();"
+                (mouseleave)="onmouseleave();">
+                    {{ messageVarClasse.content }}
+                </div>
+                <footer class="card-footer">
+                    <div class="author">
+                        {{ messageVarClasse.username }}
+                    </div>
+                    <div class="config">
+                        <a (click)="onEdit()" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a>
+                        <a (click)="onDelet()" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div> -->

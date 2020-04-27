@@ -1,23 +1,28 @@
 <div class="container main">
-    <div class="row">
-      <div class="col-2">
-        <div class="list-group" id="list-tab" role="tablist" routerLinkActive="active">
-          <a class="list-group-item list-group-item-action" id="tarefa1" data-toggle="list" [routerLink]="['tarefa1']"
-            role="tab" aria-controls="tarefa1">Tarefa 1</a>
-          <a class="list-group-item list-group-item-action" id="tarefa2" data-toggle="list" [routerLink]="['tarefa2']" role="tab"
-            aria-controls="tarefa2">Tarefa 2</a>
+  <div class="row">
+    <div class="col-2">
+      <div class="list-group" id="list-tab" role="tablist" routerLinkActive="active">
+        <a class="list-group-item list-group-item-action" id="tarefa1" data-toggle="list" [routerLink]="['tarefa1']"
+          role="tab" aria-controls="tarefa1">Tarefa 1</a>
+        <a class="list-group-item list-group-item-action" id="tarefa2" data-toggle="list" [routerLink]="['tarefa2']"
+          role="tab" aria-controls="tarefa2">Tarefa 2</a>
+          <a class="list-group-item list-group-item-action" id="tarefa3" data-toggle="list" [routerLink]="['tarefa3']"
+          role="tab" aria-controls="tarefa3">Tarefa 3</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show" id="tarefa1" role="tabpanel" aria-labelledby="tarefa1">
+          <app-tarefa1></app-tarefa1>
+        </div>
+        <div class="tab-pane fade" id="tarefa2" role="tabpanel" aria-labelledby="tarefa2">
+          <app-tarefa2></app-tarefa2>
+        </div>
+        <div class="tab-pane fade" id="tarefa3" role="tabpanel" aria-labelledby="tarefa3">
+          <app-tarefa3></app-tarefa3>
         </div>
       </div>
       <router-outlet></router-outlet>
-      <div class="col-10">
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show" id="tarefa1" role="tabpanel" aria-labelledby="tarefa1">
-            <!-- <app-tarefa1></app-tarefa1> -->
-          </div>
-          <div class="tab-pane fade" id="tarefa2" role="tabpanel" aria-labelledby="tarefa2">
-            <!-- <app-tarefa2></app-tarefa2> -->
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+</div>

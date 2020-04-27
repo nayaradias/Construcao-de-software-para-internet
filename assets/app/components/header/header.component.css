@@ -1,0 +1,25 @@
+.nav-tabs{
+    padding: 10px 12px;
+}
+.nav-item{
+    border-top: 1px solid #ccc ;
+    border-left: 1px solid #ccc ;
+    border-right: 1px solid #ccc ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 8px;
+}
+.nav-item a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ccc;
+}
+.btn-project{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: #0C6980;
+}
+.btn-group{
+    margin-left: 30px;
+}

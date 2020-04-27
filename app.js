@@ -4,12 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose  = require('mongoose');
+var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
+var messageRouters = require('./routes/messages');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/node-angular',{ useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://localhost:27017/node-angular', { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
     console.log('Conectado ao mongodb');
 }).catch((err) => {
     console.log('Erro ao se conectar ao banco de dados: ' + err);
@@ -23,7 +24,7 @@ app.set('view engine', 'hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -34,7 +35,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/', appRoutes);
+app.use('/projeto/mensagens', messageRouters);
+// app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

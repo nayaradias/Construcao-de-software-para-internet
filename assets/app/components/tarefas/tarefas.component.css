@@ -1,8 +1,8 @@
 .main {
     width: 80%;
     margin-top: 50px;
-    margin-left: 190px;
-    margin-right:150px;
+    margin-left: 120px;
+    margin-right:120px;
     padding: 15px 20px;
   }
   @media screen and (max-width: 800px) {
