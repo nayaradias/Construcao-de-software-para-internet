@@ -63,13 +63,13 @@ router.get("/node-mongodb-mongoose-user-busca", function(req, res, next) {
   });
 });
 
-router.post("/message", (req, res, next) => {
-  var messageVar = req.body.messageBody;
-  res.redirect("/message/" + messageVar);
-});
+// router.post("/message", (req, res, next) => {
+//   var messageVar = req.body.messageBody;
+//   res.redirect("/message/" + messageVar);
+// });
 
-router.get("/message/:msgParam", (req, res, next) => {
-  res.render("node", { message: req.params.msgParam });
-});
+// router.get("/message/:msgParam", (req, res, next) => {
+//   res.render("node", { message: req.params.msgParam });
+// });
 
  module.exports = router;

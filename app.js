@@ -9,12 +9,12 @@ var appRoutes = require('./routes/app');
 var messageRouters = require('./routes/messages');
 
 var app = express();
-
-mongoose.connect('mongodb://localhost:27017/node-angular', { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
-    console.log('Conectado ao mongodb');
-}).catch((err) => {
-    console.log('Erro ao se conectar ao banco de dados: ' + err);
-});
+mongoose.connect('mongodb://localhost:27017/node-angular');
+// mongoose.connect('mongodb://localhost:27017/node-angular', { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
+//     console.log('Conectado ao mongodb');
+// }).catch((err) => {
+//     console.log('Erro ao se conectar ao banco de dados: ' + err);
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

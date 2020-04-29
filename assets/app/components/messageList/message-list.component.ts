@@ -8,8 +8,9 @@ import { MessageService } from "../messages/message.service";
     template: `
         <app-message-input></app-message-input>
         <div class="col-md-8 col-md-offset-2">
-            <app-messages (editClicked_Message)="messageVarClasse.content = $event"
-                *ngFor="let messageVarClasse of messageS">
+            <app-messages [messageVarClasse]="msg" 
+                (editClicked_Message)="msg.content = $event"
+                *ngFor= "let msg of messageS">
             </app-messages>
         </div>
     `,
@@ -29,9 +30,9 @@ export class MessageListComponent implements OnInit{
         this.messageService.getMessages().subscribe(
             (dadosSucesso:Message[])=>{
                 this.messageS = dadosSucesso;
-                console.log(dadosSucesso)
+                console.log(dadosSucesso);
             },
             dadosErro => console.log(dadosErro)
-        )
+        );
     }
 }

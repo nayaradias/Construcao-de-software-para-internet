@@ -13,7 +13,7 @@ router.get('/',(req,res,next)=>{
         }
         res.status(200).json({
             myMsgSucess:'Mensagem recuperada com sucesso',
-            objsMessageSRecuperados:err
+            objsMessageSRecuperados:result
         })
     })
 })
@@ -22,9 +22,13 @@ router.get('/',(req,res,next)=>{
 router.post('/', (req, res, next) => {
 
     var message = new Message({
-        content: req.body.myContent
+        content: req.body.content
     });
+    console.log("messageA:",message);
     message.save((err, result) => {
+        console.log("messageB:",message);
+        console.log("err:",err);
+        console.log("result:",result);
         if (err) {
             return res.status(500).json({
                 myErroTitle: "Erro ao tentar salvar a Mensagem",
