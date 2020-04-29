@@ -4,10 +4,10 @@ import { MessageService } from "../messages/message.service";
 
 @Component({
     selector: 'app-message-list',
-    
+    styleUrls: ['./message-list.component.css'],
     template: `
         <app-message-input></app-message-input>
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 container-messageList">
             <app-messages [messageVarClasse]="msg" 
                 (editClicked_Message)="msg.content = $event"
                 *ngFor= "let msg of messageS">
