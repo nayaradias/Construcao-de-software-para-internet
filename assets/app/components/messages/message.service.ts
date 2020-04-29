@@ -16,25 +16,18 @@ export class MessageService {
     const bodyReq = JSON.stringify(message);
     const myHeaders = new Headers({ "Content-Type": "application/json" });
     return this.http
-      .post("http://localhost:3000/projeto/mensagens", bodyReq, { headers: myHeaders })
-      .map((responseRecebida: Response) => {
-        const responseEmJson = responseRecebida.json();
-        const messageSResponseRecebida = responseEmJson.objsMessageSRecuperados;
-        let transformedCastMassagesModelFrontEnd: Message[] = [];
-        for (let msg of messageSResponseRecebida) {
-          transformedCastMassagesModelFrontEnd.push(
-            new Message(msg.content, "Nayara", msg._id, null)
-          );
-        }
+      .post("http://localhost:3000/message", bodyReq, {
+        headers: myHeaders,
       })
-      .catch((errorRecebido: Response) =>
-        Observable.throw(errorRecebido.json())
+      .map((responseRecebida: Response) => responseRecebida.json()
+      )
+      .catch((errorRecebido: Response) => Observable.throw(errorRecebido.json())
       );
   }
 
   getMessages() {
     return this.http
-      .get("http://localhost:3000/projeto/mensagens")
+      .get("http://localhost:3000/message")
       .map((resposeRecebida: Response) => {
         const responseEmJson = resposeRecebida.json();
         const messageSResponseRecebida = responseEmJson.objsMessageSRecuperados;
@@ -46,7 +39,8 @@ export class MessageService {
         }
         this.messageSService = transformedCastMassagesModelFrontEnd;
         return transformedCastMassagesModelFrontEnd;
-      }).catch((erroRecebido: Response)=> Observable.throw(erroRecebido.json()))
+      })
+      .catch((erroRecebido: Response) => Observable.throw(erroRecebido.json()));
   }
 
   deleteMessage(message: Message) {

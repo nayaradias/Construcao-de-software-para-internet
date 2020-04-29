@@ -35,8 +35,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/projeto/mensagens', messageRouters);
-// app.use('/', appRoutes);
+app.use('/message', messageRouters);
+app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

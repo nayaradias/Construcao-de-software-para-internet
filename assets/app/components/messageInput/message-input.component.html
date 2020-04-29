@@ -2,7 +2,7 @@
     <div class="container-messageInput">
         <div class="form-group">
             <label for="myContentForm">Conteudo</label>
-            <input type="text" id="myContent" class="form-control" #refLocalInputmyContent>
+            <input type="text" id="myContent" class="form-control" #refLocalInputmyContent required>
         </div>
         <button type="submit" class="btn btn-primary" (click)="onSave(refLocalInputmyContent.value)">Salvar
             mensagem</button>
