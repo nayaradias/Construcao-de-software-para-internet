@@ -18,7 +18,9 @@
     text-decoration: none;
     cursor: pointer;
     color: #fff;
-    background: #0C6980;
+    /* background: #0C6980; */
+    background: #007bff8f;
+
 }
 .btn-group{
     margin-left: 30px;

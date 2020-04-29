@@ -1,9 +1,10 @@
 .mainAutenticacao {
   width: 85%;
   margin-left: 15px;
+  /* margin-top: 15px; */
 }
 .AutenticacaoUl{
-    margin: 10px auto;
+    margin: 25px auto;
 }
 .AutenticacaoContent{
   width: 100%;
