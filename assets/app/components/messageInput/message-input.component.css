@@ -1,5 +1,8 @@
 .container-messageInput{
-    width: 86%;
+    width: 73%;
     margin-left: 38px;
     margin-top: 20px;
+}
+.col-md-2 .btn-cancelar{
+    margin: 0px 20px;
 }

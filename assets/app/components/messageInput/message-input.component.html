@@ -15,13 +15,17 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <!-- <label for="myContent">Conteudo</label> -->
-                    <input type="text" id="myContent" class="form-control" ngModel name="myContentngForm" required
+                    <input type="text" id="myContent" class="form-control" [ngModel]="messageLoad?.content" name="myContentngForm" required
                         oninvalid="this.setCustomValidity('Campo Vazio')" oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="col-md-2">
                 <!-- <label for="myContent">&nbsp;</label> -->
                 <button type="submit" class="btn btn-primary">Salvar mensagem</button>
+            </div>
+            <div class="col-md-2">
+                <!-- <label for="myContent">&nbsp;</label> -->
+                <button type="button" class="btn btn-danger btn-cancelar" disabled>Cancelar</button>
             </div>
         </div>
     </form>
