@@ -11,7 +11,6 @@ export class MessageService {
   constructor(private http: Http) {}
 
   addMessage(message: Message) {
-    this.messageSService.push(message);
     console.log(this.messageSService);
     const bodyReq = JSON.stringify(message);
     const myHeaders = new Headers({ "Content-Type": "application/json" });
